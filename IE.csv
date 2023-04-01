@@ -5,15 +5,15 @@ numero_chapitre;chapitre;énoncé;nb_sortie;reponse;
 1;fonctions;position du graphe par rapport à une corde (=segment) pour une fonction concave;0;Cf au dessus de ses cordes;
 1;fonctions;inégalité à n points pour une fonction convexe;0; inégalité de Jensen : ∀(λ₁,..., λₙ) ∈ [0;1] tq  Σₖ₌₁ⁿλₖ = 1, ∀(x₁,..., xₙ) ∈ Df, f(Σₖ₌₁ⁿ λₖ xₖ) ≤ Σₖ₌₁ⁿ λₖ f(xₖ);
 1;fonctions;la fonction ln est-elle convexe ? Concave ?;0;Concave car sa dérivée seconde est négative, ou alors comme fonction réciproque d'une fonction convexe (exponentielle);
-1;fonctions;une fonction puissance x->xⁿ , n ∈ ℤ est-elle convexe ? Concave ? Sur ℝ puis sur ℝ+;0;; 
-1;fonctions;quelle inégalité a-t-on entre ln(1+x) et x ?;0;;
-1;fonctions;quelle inégalité a-t-on entre exp(x) et 1+x ?;0;;
-1;fonctions;quelle inégalité a-t-on entre sin(x) et x ?;0;;
-1;fonctions;comment montrer en pratique qu'une fonction est convexe ou concave ?;0;; ⊂
+1;fonctions;une fonction puissance x⟶xⁿ , n ∈ ℤ est-elle convexe ? Concave ? Sur ℝ puis sur ℝ⁺;0;Pour n pair, x⟶xⁿ est convexe sur ℝ⁺ et sur ℝ⁻ et l'est sur ℝ si n ≥ 0. \n Pour n impair, x⟶xⁿ est concave sur ℝ⁻, convexe sur ℝ⁺ mais rien sur ℝ; 
+1;fonctions;quelle inégalité a-t-on entre ln(1+x) et x ?;0;;Par analyse de fonction ou par concavité du ln ou par Taylor reste intégral à l'ordre 2 en x=0, on peut démontrer que ∀x ≥ 0, ln(1+x) ≤ x
+1;fonctions;quelle inégalité a-t-on entre eˣ et 1+x ?;0;∀x ∈ ℝ, eˣ ≥ 1+x;
+1;fonctions;quelle inégalité a-t-on entre sin(x) et x ?;0;∀x ∈ ℝ⁺, sin(x) ≤ x et on a aussi par IAF : ∀x ∈ ℝ, |sin(x)| ≤ |x|;
+1;fonctions;comment montrer en pratique qu'une fonction f est convexe ou concave ?;0;En pratique, on vérifie que f est C² et si c'est le cas, on étudie le signe de f''. f est convexe (resp. concave) sur les intervalles où f'' est positive (resp. négative). Si elle n'est que C¹, ... ;
 1;fonctions;rapport entre convexité et dérivée d'ordre 1 pour une fonction;0;;
 1;fonctions;rapport entre concavité et dérivée d'ordre 2 pour une fonction;0;;
-1;fonctions;théorème de Rolle;0; a , b ∈ ℝ, a < b, f continue sur [a, b], dérivable sur ]a, b[ , f(a) = f(b) ⟹ ∃ c ∈ ]a, b[, f'(c) = 0;
-1;fonctions;TAF;0;soit f continue sur [a, b] ( a , b ∈ ℝ, a < b), dérivable sur ]a, b[ ⟹ ∃ c ∈ ]a, b[, (f(b) - f(a)) = (b - a)f'(c);
+1;fonctions;théorème de Rolle;0;soient a , b ∈ ℝ, a < b, f continue sur [a, b], dérivable sur ]a, b[ , f(a) = f(b) ⟹ ∃ c ∈ ]a, b[, f'(c) = 0;
+1;fonctions;TAF;0;soient a , b ∈ ℝ, a < b, f continue sur [a, b], dérivable sur ]a, b[ ⟹ ∃ c ∈ ]a, b[, (f(b) - f(a)) = (b - a)f'(c);
 1;fonctions;IAF;0;;
 1;fonctions;Taylor-Young;0;;
 1;fonctions;Taylor reste intégral;0;;
