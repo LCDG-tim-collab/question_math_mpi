@@ -190,9 +190,7 @@ Liste à étudier (numéro des chapitres ou tout) (rien est considéré comme to
                         a[key] = b.copy().get(request)
                     else:
                         run = False
-            # mauvaise réponse
-            else:
-                print(f"réponse si ajouté est : {a[key][quest][1]}")
+            print(f"réponse si ajouté est : {a[key][quest][1]}")
             i += 1
 
     # liste de chapitre 
@@ -234,9 +232,7 @@ Liste à étudier (numéro des chapitres ou tout) (rien est considéré comme to
                     else:
                         run = False
 
-            # mauvaise réponse
-            else:
-                print(f"réponse si ajouté est : {a[key][quest][1]}")
+            print(f"réponse si ajouté est : {a[key][quest][1]}")
             i += 1
                 
 
