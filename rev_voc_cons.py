@@ -73,7 +73,8 @@ def save(dic):
         nb, nom = key
         for quest, lq in list(dic.get(key).items()):
             cpte, reponse = lq
-            file.write(f"{nb};{nom};{quest};{cpte};{reponse};\n")
+            rep2 = reponse.replace("\n", "\\n")
+            file.write(f"{nb};{nom};{quest};{cpte};{rep2};\n")
     file.close()
 
 
