@@ -165,7 +165,7 @@ numero_chapitre;chapitre;énoncé;nb_sortie;reponse;
 7;fonctions vectorielles;dérivée de Lof si f est dérivable et L linéaire ?;0;;
 7;fonctions vectorielles;dérivée de B(f,g) si f,g sont dérivables et B bilinéaire ?;0;;
 7;fonctions vectorielles;dérivée de (f | g) ?;0;;
-7;fonctions vectorielles;dérivée de || f ||² où || || est une norme euclidienne ?;0;;
+7;fonctions vectorielles;dérivée de ‖f‖² où ‖.‖ est une norme euclidienne ?;0;C'est (‖f‖²)' = 2(f'|f);
 8;algèbre linéaire;énoncé théorème du rang;0; Pour f une application linéaire, l'image de f est isomorphe à tout supplémentaire du noyau;
 8;algèbre linéaire;énoncé formule du rang;0; f ∈ L(E, F) et E de dimension finie, on a : dim(E) = dim(Ker(f)) + rg(f) ;
 8;algèbre linéaire;définition d'un projecteur;0;;
