@@ -206,7 +206,7 @@ numero_chapitre;chapitre;énoncé;nb_sortie;reponse;
 10;déterminants;det(AB)=?;0;;
 10;déterminants;calcul d'un déterminant triangulaire par bloc ?;0;;
 10;déterminants;déterminant de Vandermonde;0;;
-10;déterminants;formule avec la comatrice;0;∀ A ∈ Mₙ(𝕂), A × Com(A)ᵀ = Com(A)ᵀ × A = det(A) Iₙ;
+10;déterminants;formule avec la comatrice;0;C'est ∀ A ∈ Mₙ(𝕂), A × Com(A)ᵀ = Com(A)ᵀ × A = det(A) Iₙ;
 10;déterminants;que devient le déterminant d'une matrice si on effectue une opération élémentaire ?;0;;
 11;structures/arithmétique;définition d'une relation d'équivalence;0;;
 11;structures/arithmétique;définition d'une relation d'ordre;0;;
