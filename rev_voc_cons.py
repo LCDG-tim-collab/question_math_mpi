@@ -39,7 +39,7 @@ def voc():
     lines = file.readlines()
     file.close()
     dic = {}
-    for i in lines[1:]:
+    for j, i in enumerate(lines[1:]):
         chapnb, chapnom, quest, compte, reponse, bac = i.split(";")
         chapkey = (chapnb, chapnom)
         if dic.get(chapkey) is None:
