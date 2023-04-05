@@ -22,7 +22,7 @@ numero_chapitre;chapitre;énoncé;nb_sortie;reponse;
 1;fonctions;théorème de la limite de la dérivée;0;;
 1;fonctions;Vrai ou faux : pour une fonction f définie sur un intervalle I, alors f est continue en un point intérieur a ssi les limites en a- et a+ sont finies et égales ?;0;;
 1;fonctions;pour une fonction f de classe C1 sur un intervalle I, rapport entre monotonie stricte et signe de f' ?;0;;
-1;fonctions;DL Arctan(x);0;x − x3/3 +x5/5 − x7/7 + ⋯ + (−1)ⁿ x²ⁿ⁺¹/(2n + 1) + o(x²ⁿ⁺¹);
+1;fonctions;DL Arctan(x);0;x − x³/3 +x⁵/5 − x⁷/7 + ⋯ + (−1)ⁿ x²ⁿ⁺¹/(2n + 1) + o(x²ⁿ⁺¹);
 1;fonctions;DL sin(x);0;;
 1;fonctions;DL cos(x);0;∀x ∈ 𝟅(0), cos(x) = 1 - x²/2 + x⁴/4! + ⋯ + (-1)ⁿx²ⁿ/(2n)! + o(x²ⁿ) ;
 1;fonctions;DL tan(x) à l'ordre 5;0;;

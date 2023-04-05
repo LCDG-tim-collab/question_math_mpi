@@ -162,7 +162,7 @@ def choiceall(chapitre, cptechap):
 def get_pool_nb(tot, n):
     """calcule le nombre fois il faut mettre la question dans l'urne
     """
-    return (tot - n) / tot * 100 + 1
+    return int((tot - n) / tot * 100) + 1
 
 def choiceone(a, key):
     """fonction qui renvoie une question aléatoire dans le chapitre key
