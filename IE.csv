@@ -126,7 +126,7 @@ numero_chapitre;chapitre;énoncé;nb_sortie;reponse;
 5;espaces vectoriels normés;caractérisation séquentielle de la continuité;0;;
 5;espaces vectoriels normés;comment montrer en pratique que 2 normes sont équivalentes ?;0;;
 5;espaces vectoriels normés;comment montrer en pratique que 2 normes ne sont pas équivalentes (en dim infinie donc) ?;0;;
-5;espaces vectoriels normés;énoncer le théorème de Heine;0;;
+5;espaces vectoriels normés;énoncer le théorème de Heine;0;Une fonction continue sur un compact est uniformément continue;
 5;espaces vectoriels normés;définition de la continuité uniforme d'une fonction;0;;
 5;espaces vectoriels normés;rapport entre continuité globale et continuité uniforme;0;;
 5;espaces vectoriels normés;définition d'une partie convexe;0;;
