@@ -176,7 +176,10 @@ Liste à étudier (numéro des chapitres ou tout) (rien est considéré comme to
             # séléctionne une question du chapitre
             quest = choiceone(a, key)
 
-            answer = input("{}, {} : {} \nscore = ".format(requestnb, requestnom, quest))
+            rep = input("{}, {} : {} \n montrer la réponse [entrer] ".format(requestnb, requestnom, quest))
+            print(f"réponse si ajouté est : {a[key][quest][1]}")
+
+            answer = input("score = ".format(requestnb, requestnom, quest))
             # bonne réponse
             if (answer == "1"):
                 compteur += 1
@@ -191,7 +194,6 @@ Liste à étudier (numéro des chapitres ou tout) (rien est considéré comme to
                         a[key] = b.copy().get(request)
                     else:
                         run = False
-            print(f"réponse si ajouté est : {a[key][quest][1]}")
             i += 1
 
     # liste de chapitre 
@@ -211,12 +213,10 @@ Liste à étudier (numéro des chapitres ou tout) (rien est considéré comme to
             # on sélectionne la question
             key = choiceone(a, liste)
 
-            answer = input(
-                    "{}, {} : {} \n score = ".format(
-                            request, requestnom,
-                            key
-                        )
-                )
+            rep = input("{}, {} : {} \n montrer la réponse [entrer] ".format(requestnb, requestnom, quest))
+            print(f"réponse si ajouté est : {a[key][quest][1]}")
+
+            answer = input("score = ".format(requestnb, requestnom, quest))
 
             # bonne réponse
             if (answer == "1"):
