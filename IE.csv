@@ -490,7 +490,7 @@ numero_chapitre;chapitre;énoncé;nb_sortie;reponse;
 21;Probabilités;définition d'une tribu (en probas);0;;
 21;Probabilités;définition d'une probabilité conditionnelle P(A|B);0;;
 21;Probabilités;formule des probabilités composées;0;;
-21;Probabilités;formule de Bayes (probas);0;;
+21;Probabilités;formule de Bayes (probas);0;Soient (Ai) un système quasi-complet d'événement, ∀ j ∈ I, ℙ(Aⱼ|B) = (ℙ(B|Aⱼ) ℙ(Aⱼ)) / (Σᵢ(ℙ(B|Aᵢ)ℙ(Aᵢ)));
 21;Probabilités;formule des probabilités totales;0;;
 21;Probabilités;rapport entre proba conditionnelle et évènements indépendants ?;0;;
 21;Probabilités;continuité monotone (en probas);0;;
