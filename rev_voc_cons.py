@@ -3,7 +3,7 @@
 # les il signifie le programme
 
 
-"""revise voc in console
+"""revise questions_math in console
 """
 
 
@@ -14,19 +14,23 @@ import re
 def add_count():
     """fonction qui ajoute un champ vide à la fin de chaque ligne
     """
-    file = open("IE.csv", "r")
-    lines = [i.rstrip("\n") for i in file.readlines()]
+    file = open("pc_MP2I.csv", "r", encoding="UTF-8")
+    lines = []
+    for i in file.readlines():
+        newlines = i.rstrip("\n").rstrip("\"").split(";")
+        newlines.insert(3, "0")
+        lines.append(";".join(newlines))
     print(lines)
     file.close()
 
     file = open("IE.csv", "w")
-    file.write(";\n".join(lines))
+    for i in lines:
+        file.write(str(i)+";\n")
     file.close()
 
 
 
-
-def voc():
+def questions_math():
     """fonction qui renvoie le dictionnaire avec l'ensemble des questions
     sous la forme:
     dictionnaire principal:
@@ -48,10 +52,10 @@ def voc():
     return dic.copy()
 
 
-def comp(dic):
-    """fonction qui compare dic à voc en compte de question
+def comp(dic, src : dict = questions_math()):
+    """fonction qui compare dic à questions_math en compte de question
     """
-    v1 = voc()
+    v1 = src
     keys = list(dic.keys())
     somme = 0
     somme2 = 0
@@ -61,13 +65,65 @@ def comp(dic):
         somme += l1
         somme2 += l2
         print(f"'{i}' , '{j}') {l1} ;\t len dic = {l2}") 
-    print(f"voc() somme = {somme} ; dic somme = {somme2}")
+    print(f"questions_math() somme = {somme} ; dic somme = {somme2}")
 
 
-def save(dic):
+def questions_phys_1():
+    """fonction qui renvoie le dictionnaire avec l'ensemble des questions
+    sous la forme:
+    dictionnaire principal:
+    clé : nb, nom du chapitre
+    valeur : dictionnaire :
+            - clé : question
+            - valeur : [compte, réponse]
+    """
+    file = open("pc_MP2I.csv", "r", encoding="UTF-8")
+    lines = file.readlines()[1:]
+    file.close()
+    dic = {}
+    for j, i in enumerate(lines):
+        chapnb, chapnom, quest, compte, reponse, bac = i.split(";")
+        chapkey = (chapnb, chapnom)
+        if dic.get(chapkey) is None:
+            dic[chapkey] = {}
+        dic[chapkey][quest] = [int(compte), reponse]
+    return dic.copy()
+
+
+def questions_phys_2():
+    """fonction qui renvoie le dictionnaire avec l'ensemble des questions
+    sous la forme:
+    dictionnaire principal:
+    clé : nb, nom du chapitre
+    valeur : dictionnaire :
+            - clé : question
+            - valeur : [compte, réponse]
+    """
+    file = open("pc_MPI.csv", "r", encoding="UTF-8")
+    lines = file.readlines()[1:]
+    file.close()
+    dic = {}
+    for j, i in enumerate(lines):
+        if (len(i.split(";")) != 6):
+            print(i)
+        chapnb, chapnom, quest, compte, reponse, bac = i.split(";")
+        chapkey = (chapnb, chapnom)
+        if dic.get(chapkey) is None:
+            dic[chapkey] = {}
+        dic[chapkey][quest] = [int(compte), reponse]
+    return dic.copy()
+
+def save(dic, mat):
     """fonction qui sauvegarde les compte de questions dans IE.csv
     """
-    file = open("IE.csv", "w", encoding="UTF-8")
+    if mat == "math":
+        fichiernom = "IE.csv"
+    elif mat == "phys1":
+        fichiernom = "pc_MP2I.csv"
+    else:
+        fichiernom = "pc_MPI.csv"
+
+    file = open(fichiernom, "w", encoding="UTF-8")
     file.write("numero_chapitre;chapitre;énoncé;nb_sortie;reponse;\n")
     for key in list(dic.keys()):
         nb, nom = key
@@ -78,8 +134,10 @@ def save(dic):
     file.close()
 
 
-def save_score(score, demande):
-    file = open("score.csv", "w+")
+def save_score(score, demande, mat):
+    """enregistre le score dans un fichier externe
+    """
+    file = open(("score_math.csv","score_phy.csv")[mat != "math"], "w+")
     lines = file.readlines()
     if lines == []:
         file.write("bonne_rep;nb_quest;\n")
@@ -97,9 +155,14 @@ def choiceall(chapitre, cptechap):
     for k, v in liitems:
         somquest += v
     for k, v in liitems: 
-        pool.extend([k] * ((somquest - v) + 1))
+        pool.extend([k] * get_pool_nb(somquest, v))
     return rdm.choice(pool)
 
+
+def get_pool_nb(tot, n):
+    """calcule le nombre fois il faut mettre la question dans l'urne
+    """
+    return (tot - n) / tot * 100 + 1
 
 def choiceone(a, key):
     """fonction qui renvoie une question aléatoire dans le chapitre key
@@ -110,7 +173,7 @@ def choiceone(a, key):
     for k, v in liitems:
         somquest += v[0]
     for k, v in liitems: 
-        pool.extend([k] * ((somquest - v[0]) + 1))
+        pool.extend([k] * get_pool_nb(somquest, v[0]))
     return rdm.choice(pool)
 
 
@@ -126,7 +189,7 @@ def comptechap(a):
     return compteparchap
 
 
-def revise_voc_in_console(a: dict = voc(), b: dict = voc()):
+def revise_voc_in_console_math(a: dict = questions_math(), b: dict = questions_math()):
     """fonction principal
     """
     # récupération des chapitres de la bases
@@ -248,11 +311,275 @@ Liste à étudier (numéro des chapitres ou tout) (rien est considéré comme to
             )
 
     # sauvegarde des comptes
-    save(b)
+    save(b, "math")
 
     # pour sauvegarder les scores dans un fichier externe décommenter la ligne ci-dessous
     # save_score(compteur, i - 1)
 
+def revise_voc_in_console_phy1(a: dict = questions_phys_1(), b: dict = questions_phys_1()):
+    """fonction principal
+    """
+    # récupération des chapitres de la bases
+    listchap = list(a.keys())
+    
+    compteparchap = comptechap(a)
+
+    # affichage de la requête pour l'utilisateur
+    request = input(
+        """Choisissez qu'UNE SEULE des propositions suivantes:
+tout, {lst}
+
+Liste à étudier (numéro des chapitres ou tout) (rien est considéré comme tout) = 
+""".format(
+            lst=", ".join(
+                str(i) +":"+ str(j)
+                for i,j in listchap
+            )
+        )
+    )
+    # contrôle des réponses
+    while not re.findall("^(\d+(, *\d+)*|tout)?$", request):
+        request = input("input incorrect; nouvelle input = ")
+
+    if request == "":
+        request = "tout"
+
+    # demande nobre de questions
+    nb_demande = input("combien de question vous seront posées = ")
+    while not re.findall("^\d+$", nb_demande):
+        nb_demande = input("combien de question vous seront posées = ")
+    nb_demande = int(nb_demande)
+
+    # compte des bonnes réponses
+    compteur = 0
+    i = 1
+    run = True
+
+    # questionnaire sur tous les chapitres
+    if request == "tout":
+        while i <= nb_demande and run:
+            # sélectionne un chaptire parmi tous les chaptires restants
+            requestnb, requestnom = choiceall([i for i,j in list(a.keys())], comptechap(a))
+            
+            key = (requestnb, requestnom)
+            
+            # séléctionne une question du chapitre
+            quest = choiceone(a, key)
+
+            input("{}, {} : {} \n montrer la réponse [entrer] ".format(requestnb, requestnom, quest))
+            print(f"réponse si ajouté est : {a[key][quest][1]}")
+
+            answer = input("score = ")
+            # bonne réponse
+            if (answer == "1"):
+                compteur += 1
+                del a[key][quest]
+                b[key][quest][0] += 1
+                if len(a[key]) == 0:
+                    del a[key]
+                    request2 = input("continuer? yes or no (ou oui ou non)\n")
+                    if (request2[0] in "YyoO" and request2[1] in "EeuU" 
+                            and request2[2] in "SsiI") or request2[0] in "YyoO" \
+                                or request2 == "":
+                        a[key] = b.copy().get(request)
+                    else:
+                        run = False
+            i += 1
+
+    # liste de chapitre 
+    else:
+
+        while i <= nb_demande and run:
+            # liste des chaps en ["a", "b", "c"]
+            reql = [str(int(j)) for j in request.split(",")]
+            
+            # liste des chaps qui sont encore dans la liste
+            listechap = [i for i,j in list(a.keys()) if i in reql]
+
+            # on sélection un des chapitres
+            request, requestnom = choiceall(listechap, compteparchap)
+            liste = request, requestnom
+            
+            # on sélectionne la question
+            key = choiceone(a, liste)
+
+            input("{}, {} : {} \n montrer la réponse [entrer] ".format(request, requestnom, key))
+            print(f"réponse si ajouté est : {a[liste][key][1]}")
+
+            answer = input("score = ")
+
+            # bonne réponse
+            if (answer == "1"):
+                compteur += 1
+                del a[liste][key]
+                b[liste][key][0] += 1
+                if len(a[liste]) == 0:
+                    del a[liste]
+                    request2 = input("continuer? yes or no (ou oui ou non)\n")
+                    if request2[0] in "YyoO" or request2 == "" or ((request2[0] in "YyoO") and (request2[1] in "EeUu") 
+                            and (request2[2] in "SsIi")):
+                        a[liste] = b.get(liste).copy()
+
+                    else:
+                        run = False
+
+            i += 1
+                
+
+    if nb_demande == 0:
+        print("Pas de question à poser")
+    else:
+        print(
+                "{} / {} soit {} % de bonnes réponses".format(
+                        compteur,
+                        i - 1,
+                        round(compteur / (i - 1) * 100, 2)
+                    )
+            )
+
+    # sauvegarde des comptes
+    save(b, "phys1")
+
+    # pour sauvegarder les scores dans un fichier externe décommenter la ligne ci-dessous
+    # save_score(compteur, i - 1)
+
+def revise_voc_in_console_phy2(a: dict = questions_phys_2(), b: dict = questions_phys_2()):
+    """fonction principal
+    """
+    # récupération des chapitres de la bases
+    listchap = list(a.keys())
+    
+    compteparchap = comptechap(a)
+
+    # affichage de la requête pour l'utilisateur
+    request = input(
+        """Choisissez qu'UNE SEULE des propositions suivantes:
+tout, {lst}
+
+Liste à étudier (numéro des chapitres ou tout) (rien est considéré comme tout) = 
+""".format(
+            lst=", ".join(
+                str(i) +":"+ str(j)
+                for i,j in listchap
+            )
+        )
+    )
+    # contrôle des réponses
+    while not re.findall("^(\d+(, *\d+)*|tout)?$", request):
+        request = input("input incorrect; nouvelle input = ")
+
+    if request == "":
+        request = "tout"
+
+    # demande nobre de questions
+    nb_demande = input("combien de question vous seront posées = ")
+    while not re.findall("^\d+$", nb_demande):
+        nb_demande = input("combien de question vous seront posées = ")
+    nb_demande = int(nb_demande)
+
+    # compte des bonnes réponses
+    compteur = 0
+    i = 1
+    run = True
+
+    # questionnaire sur tous les chapitres
+    if request == "tout":
+        while i <= nb_demande and run:
+            # sélectionne un chaptire parmi tous les chaptires restants
+            requestnb, requestnom = choiceall([i for i,j in list(a.keys())], comptechap(a))
+            
+            key = (requestnb, requestnom)
+            
+            # séléctionne une question du chapitre
+            quest = choiceone(a, key)
+
+            input("{}, {} : {} \n montrer la réponse [entrer] ".format(requestnb, requestnom, quest))
+            print(f"réponse si ajouté est : {a[key][quest][1]}")
+
+            answer = input("score = ")
+            # bonne réponse
+            if (answer == "1"):
+                compteur += 1
+                del a[key][quest]
+                b[key][quest][0] += 1
+                if len(a[key]) == 0:
+                    del a[key]
+                    request2 = input("continuer? yes or no (ou oui ou non)\n")
+                    if (request2[0] in "YyoO" and request2[1] in "EeuU" 
+                            and request2[2] in "SsiI") or request2[0] in "YyoO" \
+                                or request2 == "":
+                        a[key] = b.copy().get(request)
+                    else:
+                        run = False
+            i += 1
+
+    # liste de chapitre 
+    else:
+
+        while i <= nb_demande and run:
+            # liste des chaps en ["a", "b", "c"]
+            reql = [str(int(j)) for j in request.split(",")]
+            
+            # liste des chaps qui sont encore dans la liste
+            listechap = [i for i,j in list(a.keys()) if i in reql]
+
+            # on sélection un des chapitres
+            request, requestnom = choiceall(listechap, compteparchap)
+            liste = request, requestnom
+            
+            # on sélectionne la question
+            key = choiceone(a, liste)
+
+            input("{}, {} : {} \n montrer la réponse [entrer] ".format(request, requestnom, key))
+            print(f"réponse si ajouté est : {a[liste][key][1]}")
+
+            answer = input("score = ")
+
+            # bonne réponse
+            if (answer == "1"):
+                compteur += 1
+                del a[liste][key]
+                b[liste][key][0] += 1
+                if len(a[liste]) == 0:
+                    del a[liste]
+                    request2 = input("continuer? yes or no (ou oui ou non)\n")
+                    if request2[0] in "YyoO" or request2 == "" or ((request2[0] in "YyoO") and (request2[1] in "EeUu") 
+                            and (request2[2] in "SsIi")):
+                        a[liste] = b.get(liste).copy()
+
+                    else:
+                        run = False
+
+            i += 1
+                
+
+    if nb_demande == 0:
+        print("Pas de question à poser")
+    else:
+        print(
+                "{} / {} soit {} % de bonnes réponses".format(
+                        compteur,
+                        i - 1,
+                        round(compteur / (i - 1) * 100, 2)
+                    )
+            )
+
+    # sauvegarde des comptes
+    save(b, "phys2")
+
+    # pour sauvegarder les scores dans un fichier externe décommenter la ligne ci-dessous
+    # save_score(compteur, i - 1)
+
+def revise_voc_in_console():
+    rep = input("matière m ou rien pour math p pour physique")
+    if rep == "" or rep in "mM":
+        revise_voc_in_console_math()
+    elif rep in "pP":
+        annee = input("Quel année réviser 1 pour 1ere année 2 pour 2e année")
+        if annee == "1":
+            revise_voc_in_console_phy1()
+        elif annee == "2":
+            revise_voc_in_console_phy2()
 
 
 if __name__ == "__main__":
