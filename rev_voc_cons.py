@@ -162,6 +162,8 @@ def choiceall(chapitre, cptechap):
 def get_pool_nb(tot, n):
     """calcule le nombre fois il faut mettre la question dans l'urne
     """
+    if tot = 0:
+        return 1
     return int((tot - n) / tot * 100) + 1
 
 def choiceone(a, key):
