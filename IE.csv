@@ -30,7 +30,7 @@ numero_chapitre;chapitre;énoncé;nb_sortie;reponse;
 1;fonctions;DL ch(x);0;∀x ∈ 𝟅(0), ch(x) = 1 + x²/2 + x⁴/4! + ⋯ + x²ⁿ/(2n)! + o(x²ⁿ);
 1;fonctions;DL sh(x);0;∀x ∈ 𝟅(0), sh(x) = x + x³/3! + ⋯ + x²ⁿ⁺¹/(2n+1)! + o(x²ⁿ⁺¹);
 1;fonctions;DL 1/(1-x);0;∀x ∈ 𝟅(0), 1/(1-x) = 1 + x + x² + ⋯ + xⁿ + o(xⁿ);
-1;fonctions;DL 1/(1+x);0;;
+1;fonctions;DL 1/(1+x);0;∀x ∈ 𝟅(0), 1/(1+x) = 1 - x + x² + ⋯ + (-1)ⁿ xⁿ + o(xⁿ);
 1;fonctions;DL ln(1+x);0;∀x ∈ 𝟅(0), ln(1+x) = - x + x²/2 + ⋯ + (-1)ⁿ⁺¹xⁿ/n + o(xⁿ);
 1;fonctions;DL ln(1-x);0;∀x ∈ 𝟅(0), ln(1 - x) = - x - x²/2 - ⋯ - xⁿ/n + o(xⁿ);
 1;fonctions;DL (1+x)ᵅ;0;;
