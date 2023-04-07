@@ -184,7 +184,7 @@ numero_chapitre;chapitre;énoncé;nb_sortie;reponse;
 8;algèbre linéaire;comment caractériser un projecteur ?;0;;
 8;algèbre linéaire;si la composée de 2 applications linéaires est nulle, que peut-on dire pour les images, noyaux ? Réciproque ?;0;;
 8;algèbre linéaire;pour 2 applications linéaires, quel rapport entre Ker u et Ker vou ? Quel énoncé pour les images ?;0;;
-8;algèbre linéaire;dimension d'une somme (directe) de sous-espaces vectoriels ?;0;;
+8;algèbre linéaire;dimension d'une somme (directe) de sous-espaces vectoriels ?;0;Si la somme est directe alors c'est la somme des dimensions;
 8;algèbre linéaire;dimension de L(E,F) ? (pour E et F deux espaces vectoriels de dim finie);0;;
 8;algèbre linéaire;Caractérisation des isomorphismes en dimension finie;0;;
 9;matrices;dimension de 𝓐ₙ(𝕂) ? 𝓢ₙ(𝕂) ?;0;dim(𝓐ₙ(𝕂)) = (n(n-1)) / 2 et dim(𝓢ₙ(𝕂)) = (n(n+1)) / 2;
