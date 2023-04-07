@@ -583,11 +583,11 @@ Liste à étudier (numéro des chapitres ou tout) (rien est considéré comme to
     # save_score(compteur, i - 1)
 
 def revise_voc_in_console():
-    rep = input("matière m ou rien pour math p pour physique")
+    rep = input("matière m ou rien pour math p pour physique ")
     if rep == "" or rep in "mM":
         revise_voc_in_console_math()
     elif rep in "pP":
-        annee = input("Quel année réviser 1 pour 1ere année 2 pour 2e année")
+        annee = input("Quel année réviser 1 pour 1ere année 2 pour 2e année ")
         if annee == "1":
             revise_voc_in_console_phy1()
         elif annee == "2":
