@@ -162,7 +162,9 @@ def choiceall(chapitre, cptechap):
 def get_pool_nb(tot, n):
     """calcule le nombre fois il faut mettre la question dans l'urne
     """
-    return (tot - n) / tot * 100 + 1
+    if tot == 0:
+        return 1
+    return int((tot - n) / tot * 100) + 1
 
 def choiceone(a, key):
     """fonction qui renvoie une question aléatoire dans le chapitre key
@@ -366,10 +368,13 @@ Liste à étudier (numéro des chapitres ou tout) (rien est considéré comme to
             # séléctionne une question du chapitre
             quest = choiceone(a, key)
 
-            input("{}, {} : {} \n montrer la réponse [entrer] ".format(requestnb, requestnom, quest))
-            print(f"réponse si ajouté est : {a[key][quest][1]}")
-
-            answer = input("score = ")
+            show = input("{}, {} : {} \n montrer la réponse [entrer] ".format(requestnb, requestnom, quest))
+            if show == "1":
+                answer = "1"
+            else:
+                print(f"réponse si ajouté est : {a[key][quest][1]}")
+                answer = input("score = ")
+            
             # bonne réponse
             if (answer == "1"):
                 compteur += 1
@@ -403,10 +408,12 @@ Liste à étudier (numéro des chapitres ou tout) (rien est considéré comme to
             # on sélectionne la question
             key = choiceone(a, liste)
 
-            input("{}, {} : {} \n montrer la réponse [entrer] ".format(request, requestnom, key))
-            print(f"réponse si ajouté est : {a[liste][key][1]}")
-
-            answer = input("score = ")
+            show = input("{}, {} : {} \n montrer la réponse [entrer] ".format(request, requestnom, key))
+            if show == "1":
+                answer = "1"
+            else:
+                print(f"réponse si ajouté est : {a[liste][key][1]}")
+                answer = input("score = ")
 
             # bonne réponse
             if (answer == "1"):
@@ -493,10 +500,13 @@ Liste à étudier (numéro des chapitres ou tout) (rien est considéré comme to
             # séléctionne une question du chapitre
             quest = choiceone(a, key)
 
-            input("{}, {} : {} \n montrer la réponse [entrer] ".format(requestnb, requestnom, quest))
-            print(f"réponse si ajouté est : {a[key][quest][1]}")
-
-            answer = input("score = ")
+            show = input("{}, {} : {} \n montrer la réponse [entrer] ".format(requestnb, requestnom, quest))
+            if show == "1":
+                answer = "1"
+            else:
+                print(f"réponse si ajouté est : {a[key][quest][1]}")
+                answer = input("score = ")
+            
             # bonne réponse
             if (answer == "1"):
                 compteur += 1
@@ -530,10 +540,12 @@ Liste à étudier (numéro des chapitres ou tout) (rien est considéré comme to
             # on sélectionne la question
             key = choiceone(a, liste)
 
-            input("{}, {} : {} \n montrer la réponse [entrer] ".format(request, requestnom, key))
-            print(f"réponse si ajouté est : {a[liste][key][1]}")
-
-            answer = input("score = ")
+            show = input("{}, {} : {} \n montrer la réponse [entrer] ".format(request, requestnom, key))
+            if show == "1":
+                answer = "1"
+            else:
+                print(f"réponse si ajouté est : {a[liste][key][1]}")
+                answer = input("score = ")
 
             # bonne réponse
             if (answer == "1"):
@@ -571,11 +583,11 @@ Liste à étudier (numéro des chapitres ou tout) (rien est considéré comme to
     # save_score(compteur, i - 1)
 
 def revise_voc_in_console():
-    rep = input("matière m ou rien pour math p pour physique")
+    rep = input("matière m ou rien pour math p pour physique ")
     if rep == "" or rep in "mM":
         revise_voc_in_console_math()
     elif rep in "pP":
-        annee = input("Quel année réviser 1 pour 1ere année 2 pour 2e année")
+        annee = input("Quel année réviser 1 pour 1ere année 2 pour 2e année ")
         if annee == "1":
             revise_voc_in_console_phy1()
         elif annee == "2":
