@@ -97,4 +97,4 @@ numero chapitre;chapitre;question;compte;reponse;
 17;Mecanique quantique ondulatoire;probabilité de trouver la particule à l'instant t entre x et x + dx, dP(x) = ? ;0;dP(x) = |ϕ(x,t)|²⋅dx;
 17;Mecanique quantique ondulatoire;densité linéique de probabilité ρ(x,t) = ? ;0;ρ(x,t) = dP(x) / dx = |ϕ(x,t)|²;
 17;Mecanique quantique ondulatoire;équation de Schrodinger à une dimension;0;ih̅⋅∂ϕ(x,t)/∂t = - h̅² / (2m) × d² (ϕ(x,t)) + V(x,t)*ϕ(x,t) / dx²;
-17;Mecanique quantique ondulatoire;relation de dispersion quantique;0;E = h̅w = h̅²k² / (2m) = p² / 2m ;
+17;Mecanique quantique ondulatoire;relation de dispersion quantique;0;E = h̅ω = h̅²k² / (2m) = p² / 2m ;
