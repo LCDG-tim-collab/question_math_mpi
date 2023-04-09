@@ -6,6 +6,7 @@
  - 𝛺 : \mitOmega
  - ℳ : \mscrM
  - 𝒫 : \mscrP
+ - 𝒜 : \mscrA
  - ℝ : \BbbR
  - ℕ : \BbbN
  - ℤ : \BbbZ
@@ -17,7 +18,20 @@
  - A̅ : A + \overbar
  - ⟶ : \longrightarrow
  - ⟹ : \Longrightarrow
-
+ - ∞ : \infty
+ - ≥ : \ge
+ - ≤ : \le
+ - ‖ : \Vert
+ - ⦀ : \VVert
+ - ∼ : \sim
+ - ∀ : \forall
+ - ∃ : \exists
+ - ⊂ : \subset
+ - ⊃ : \supset
+ - ∩ : \cap
+ - ∪ : \cup
+ - ∅ : \emptyset
+ - ∈ : \in
 
 
 ## ligne à controler
