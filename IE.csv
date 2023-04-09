@@ -498,7 +498,6 @@ numero_chapitre;chapitre;énoncé;nb_sortie;reponse;
 21;Probabilités;formule de Bayes (probas);0;Soient (Ai) un système quasi-complet d'événement, ∀ j ∈ I, P(Aⱼ|B) = (P(B|Aⱼ) P(Aⱼ)) / (∑ᵢ(P(B|Aᵢ)P(Aᵢ)));
 21;Probabilités;formule des probabilités totales;0;Soit I un ensemble au plus dénombrable, soit (Aᵢ)ᵢ∈ I un système quasi-complet d'évènements de probabilités non nulles d'un espace probabilisé (𝛺, 𝒜, P), Alors pour tout B, on a : \n P(B) = ∑ᵢ∈I P(B ∩ Aᵢ) = ∑ᵢ∈I P(B|Aᵢ)P(Aᵢ);
 21;Probabilités;rapport entre probabilité conditionnelle et évènements indépendants ?;0;Soit A, B ∈ 𝒜 telle que P(B) ≠ 0, on a P(A|B) = P(A) ⟺ A et B sont indépendants;
-<<<<<<< HEAD
 21;Probabilités;théorème de la continuité monotone (en probas);0;Soit un espace probabilisé (𝛺, 𝒜, P), \n 1. ∀ (Aₙ) ∈ 𝒜ᴺ, ∀n ∈ ℕ Aₙ ⊂ Aₙ₊₁ ⟹ P(∪ₙ₌₀⁺∞ Aₙ) = lim_(n ⟶ +∞) P(Aₙ) \n 2. ∀ (Aₙ) ∈ 𝒜ᴺ, ∀n ∈ ℕ Aₙ₊₁ ⊂ Aₙ ⟹ P(∩ₙ₌₀⁺∞ Aₙ) = lim_(n ⟶ +∞) P(Aₙ);
 21;Probabilités;définition d'un événement négligeable (en probas);0;Soit un espace probabilisé (𝛺, 𝒜, P), A ∈ 𝒜 est négligeable si P(A) = 0;
 21;Probabilités;définition d'un événement presque sûr (en probas);0;Soit un espace probabilisé (𝛺, 𝒜, P), A ∈ 𝒜 est presque sûr si P(A) = 1;
@@ -506,15 +505,6 @@ numero_chapitre;chapitre;énoncé;nb_sortie;reponse;
 21;Probabilités;définition de l'indépendance mutuelle de n évènements (en probas);0;Soit (Aᵢ)ᵢ∈I une famille quelconque d'évènements de l'espace probabilisé (𝛺, 𝒜, P). On dit que les Aᵢ sont (mutuellement) indépendants ou que les (Aᵢ)ᵢ∈I est une famille d'évènements indépendants si, ∀ J ⊂ I, J finies, on a : P(∪ⱼ∈J Aⱼ) = ∏ⱼ∈J P(Aⱼ);
 21;Probabilités;À quelle condition une famille (p_ω) définit-elle une distribution de probabilités discrète ?;0;Soient 𝛺 un ensemble au plus dénombrable et P une probabilité sur (𝛺, 𝒫(𝛺)). si l'on pose p_ω = P({ω}), alors (p_ω) ω ∈ 𝛺 est une distribution de probabilités discrète sur 𝛺 et P est la probabilité associée à cette distribution;
 21;Probabilités;Définition d'un ensemble dénombrable, exemples ?;0;;
-=======
-21;Probabilités;théorème de la continuité monotone (en probas);0;Soit un espace probabilisé (𝛀, 𝒜, P), \n 1. ∀ (Aₙ) ∈ 𝒜ᴺ, ∀n ∈ ℕ Aₙ ⊂ Aₙ₊₁ ⟹ P(∪ₙ₌₀⁺∞ Aₙ) = lim_(n ⟶ +∞) P(Aₙ) \n 2. ∀ (Aₙ) ∈ 𝒜ᴺ, ∀n ∈ ℕ Aₙ₊₁ ⊂ Aₙ ⟹ P(∩ₙ₌₀⁺∞ Aₙ) = lim_(n ⟶ +∞) P(Aₙ);
-21;Probabilités;définition d'un événement négligeable (en probas);0;Soit un espace probabilisé (𝛀, 𝒜, P), A ∈ 𝒜 est négligeable si P(A) = 0;
-21;Probabilités;définition d'un événement presque sûr (en probas);0;Soit un espace probabilisé (𝛀, 𝒜, P), A ∈ 𝒜 est presque sûr si P(A) = 1;
-21;Probabilités;définition de l'indépendance de 2 évènements (en probas);0;Deux évènements A et B de l'espace probabilisé (𝛀, 𝒜, P) sont dits indépendants si P(A ∩ B) = P(A) × P(B);
-21;Probabilités;définition de l'indépendance mutuelle de n évènements (en probas);0;Soit (Aᵢ)ᵢ∈I une famille quelconque d'évènements de l'espace probabilisé (𝛀, 𝒜, P). On dit que les Aᵢ sont (mutuellement) indépendants ou que les (Aᵢ)ᵢ∈I est une famille d'évènements indépendants si, ∀ J ⊂ I, J finies, on a : P(∪ⱼ∈J Aⱼ) = ∏ⱼ∈J P(Aⱼ);
-21;Probabilités;À quelle condition une famille (p_ω) définit-elle une distribution de probabilités discrète ?;0;Soient 𝛀 un ensemble au plus dénombrable et P une probabilité sur (𝛀, 𝒫(𝛀)). si l'on pose p_ω = P({ω}), alors (p_ω) ω ∈ 𝛀 est une distribution de probabilités discrète sur 𝛀 et P est la probabilité associée à cette distribution;
-21;Probabilités;Définition d'un ensemble dénombrable, exemples ?;0;Un ensemble dénombrable est un ensemble en bijection avec ℕ. Par exemple, ℕ*, ℤ, ℚ, ℕᵖ avec p ∈ ℕ* sont dénombrables;
->>>>>>> a4a05c7c977eddf9d411a15b9b6feaa6376c4f91
 22;Variables aléatoires;définition d'une v.a.r. (en probas);0;;
 22;Variables aléatoires;définition de la loi d'une v.a.r. (en probas);0;;
 22;Variables aléatoires;définition de la loi conjointe d'un couple de v.a.r. (en probas);0;;
@@ -529,13 +519,8 @@ numero_chapitre;chapitre;énoncé;nb_sortie;reponse;
 22;Variables aléatoires;interprétation "pratique" de la loi binomiale (en probas) ?;0;;
 22;Variables aléatoires;comment expliquer la loi binomiale à l'aide de la loi de Bernoulli ? (en probas);0;;
 22;Variables aléatoires;définition de la loi géométrique (en probas);0;;
-<<<<<<< HEAD
 22;Variables aléatoires;interprétation "pratique" de la loi géométrique (en probas) ?;0;;
 22;Variables aléatoires;définition de la loi de Poisson (en probas);0;X∼P(λ) si X(𝛺) = ℕ et ∀k∈ℕ, P(X=k) = exp(-λ)*λᵏ/k!;
-=======
-22;Variables aléatoires;interprétation "pratique" de la loi géométrique (en probas) ?;0;La loi géométrique modélise le rang du premier succès pour une répétition d'événements de même probabilité et de façon indépendante;
-22;Variables aléatoires;définition de la loi de Poisson (en probas);0;X∼𝒫(λ) si X(𝛀) = ℕ et ∀k∈ℕ, P(X=k) = exp(-λ)*λᵏ/k!;
->>>>>>> a4a05c7c977eddf9d411a15b9b6feaa6376c4f91
 22;Variables aléatoires;convergence de la loi de Poisson vers la loi binomiale, ou le contraire ? Et dans quelles circonstances ?;0;;
 22;Variables aléatoires;définition de l'espérance d'une v.a.r.;0;;
 22;Variables aléatoires;qu'est-ce qu'une v.a.r. d'espérance finie ?;0;;
