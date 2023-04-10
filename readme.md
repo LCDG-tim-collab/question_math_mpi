@@ -9,6 +9,7 @@
  - 𝒜 : \mscrA
  - 𝑂(1) : \mit0 (1)
  - 𝑜(1) : \mito (1)
+ - 𝑢(𝑥) : \mitu (\mitx )
  - ℝ : \BbbR
  - ℕ : \BbbN
  - ℤ : \BbbZ
@@ -46,4 +47,6 @@
 - pc_MPI.csv l 68 : tim : "j'ai un doute sur la réponse"
 - pc_MPI.csv l 81 : tim : "j'ai un doute sur la réponse"
 - pc_MPI.csv l 99 : tim : "j'ai un doute sur la réponse"
+- IE.csv l 104 : tim : "j'ai un doute sur la réponse"
+- IE.csv l 105 : tim : "j'ai un doute sur la réponse"
 - IE.csv l 370 : tim : "j'ai un doute sur la réponse"
