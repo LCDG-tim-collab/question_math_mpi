@@ -7,6 +7,8 @@
  - ℳ : \mscrM
  - 𝒫 : \mscrP
  - 𝒜 : \mscrA
+ - 𝑂(1) : \mit0 (1)
+ - 𝑜(1) : \mito (1)
  - ℝ : \BbbR
  - ℕ : \BbbN
  - ℤ : \BbbZ
