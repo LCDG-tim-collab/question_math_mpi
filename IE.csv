@@ -372,7 +372,7 @@ numero_chapitre;chapitre;énoncé;nb_sortie;reponse;
 16;Espaces préhilbertiens;que vaut le produit scalaire de 2 matrices <A, B> en fonction des coefficients a_(i,j) et b_(i,j) ?;0;;
 16;Espaces préhilbertiens;que vaut le carré de la norme usuelle ‖A‖² d'une matrice en fonction de ses coefficients a_(i,j) ?;0;;
 16;Espaces préhilbertiens;définition d'un projecteur orthogonal (dans un espace préhilbertien);0;;
-16;Espaces préhilbertiens;inégalité de Cauchy-Schwarz;0; (x|y) ≤ ‖𝑥‖ ‖y‖ (‖.‖ : norme associée au produit scalaire);
+16;Espaces préhilbertiens;inégalité de Cauchy-Schwarz;0; |(x|y)| ≤ ‖x‖ ‖y‖ (‖.‖ : norme associée au produit scalaire);
 16;Espaces préhilbertiens;identité de polarisation (espaces préhilbertiens);0;;
 16;Espaces préhilbertiens;si E est un espace préhilbertien, qu'est-ce que l'orthogonal de E : E┴ ?;0;C'est {0};
 16;Espaces préhilbertiens;relation entre produit scalaire et norme associée, polarisation;0;;
