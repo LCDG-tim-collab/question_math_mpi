@@ -50,3 +50,4 @@
 - IE.csv l 104 : tim : "j'ai un doute sur la réponse"
 - IE.csv l 105 : tim : "j'ai un doute sur la réponse"
 - IE.csv l 370 : tim : "j'ai un doute sur la réponse"
+- IE.csv l 92 : mel : "Les \n ne fonctionnent pas"
