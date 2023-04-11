@@ -16,7 +16,7 @@ numero_chapitre;chapitre;énoncé;nb_sortie;reponse;
 1;fonctions;TAF;0;soient a , b ∈ ℝ, a < b, f continue sur [a, b], dérivable sur ]a, b[ ⟹ ∃ c ∈ ]a, b[, (f(b) - f(a)) = (b - a)f'(c);
 1;fonctions;IAF;0;soient a , b ∈ ℝ, a < b, f continue sur [a, b], dérivable sur ]a, b[, ∃M ∈ ℝ ∀ t ∈ ]a, b[, |f'(t)| ≤ M ⟹ |f(b) - f(a)| ≤ M|b - a|;
 1;fonctions;Taylor-Young;0;Soit I un intervalle, n ∈ ℕ f : I ⟶ 𝕂 ∈ 𝒞ⁿ(I), a ∈ I On a alors f(x) - ∑ₖ₌₀ⁿ(x - a)ᵏ f⁽ᵏ⁾(a) /k! =_x⟶a 𝑜((x - a)ⁿ);
-1;fonctions;Taylor reste intégral;0;;Soit I un intervalle, n ∈ ℕ f : I ⟶ 𝕂 ∈ 𝒞ⁿ⁺¹(I), (a, b) ∈ I² On a alors f(b) = ∑ₖ₌₀ⁿ(b - a)ᵏ f⁽ᵏ⁾(a) /k! + ∫ₐᵇ (b - x)ⁿ f⁽ⁿ⁾(x) /n! dx;
+1;fonctions;Taylor reste intégral;0;Soit I un intervalle, n ∈ ℕ f : I ⟶ 𝕂 ∈ 𝒞ⁿ⁺¹(I), (a, b) ∈ I² On a alors f(b) = ∑ₖ₌₀ⁿ(b - a)ᵏ f⁽ᵏ⁾(a) /k! + ∫ₐᵇ (b - x)ⁿ f⁽ⁿ⁾(x) /n! dx;
 1;fonctions;inégalité de Taylor Lagrange;0;Soit I un intervalle, n ∈ ℕ f : I ⟶ 𝕂 ∈ 𝒞ⁿ⁺¹(I), (a, b) ∈ I² On a alors |f(b) - ∑ₖ₌₀ⁿ(b - a)ᵏ f⁽ᵏ⁾(a) /k! | ≤ |b - a|ⁿ⁺¹ sup ({f⁽ⁿ⁺¹⁾(x), x ∈ [a, b]}) /(n+1)! ;
 1;fonctions;formule de Leibniz;0; soient f, g ∈ 𝒟ⁿ ⊃ 𝒞ⁿ, alors le produit est dérivable n fois et (fg)⁽ⁿ⁾ = ∑ₖ₌₁ⁿ (ₖⁿ)f⁽ᵏ⁾g⁽ⁿ⁻ᵏ⁾ ;
 1;fonctions;théorème de la limite de la dérivée;0;Soit f : I ⟶ ℝ et a ∈ I. Si f est continue sur I, dérivable sur I ∖ {a} et si lim_x⟶a, x≠a f'(x) = l ∈ ̅ℝ alors lim_x⟶a (f(x) - f(a)) / (x - a) = l;
