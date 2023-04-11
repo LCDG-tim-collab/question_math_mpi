@@ -1,5 +1,19 @@
 # programme d'intérrogation des questions de cours en math et physique
 
+
+## Comment ça marche
+
+1. lancer le programme python
+2. choissisez la matière à étudier
+3. Si vous avez choisis physique, choisissez l'année
+4. Choisissez les notions que vous voulez réviser en fonction des numéros de chapitre. Fournir une entrée vide est synonyme de réviser tous les chapitres. Pour une liste précise de chapitre comme par éxemple les chapitres 1, 2, 3, et 15 on peut utiliser le format "1,2,3,15" avec ou sans espace après les virgules donc "1, 2, 3, 15" marche aussi et même "1 , 2 , 3 , 15". L'usage de plage de chapitre est également possible à l'aide du format pour le même exemple "1 - 3, 15-15" de même que précédement les espaces sont optionnel "1-3,15-15" marche aussi cependant pour un chapitre seul dans une liste de plage comme le 15 il est impératif de l'écrire "15-15"
+
+
+
+
+
+
+
 ## symboles
 
  - ɛ : \varepsilon 
