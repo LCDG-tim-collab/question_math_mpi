@@ -66,6 +66,7 @@ numero_chapitre;chapitre;énoncé;nb_sortie;reponse;
 13;Regime sinusoidal force ;Lois de Kirchhoff;0;loi des noeuds : ∑̱I = 0 et loi des mailles ∑̱U = 0 ;
 13;Regime sinusoidal force ;impedence equivalente en serie / dérivation ;0;En serie ̱Zeq = ∑̱Z, parallèle ̱Yeq = ̱∑̱Y = 1 / Ẕeq = ∑1/Ẕ ;
 14;Filtrage lineaire;Fonction de transfert d'une filtre;0;̱H = ̱S / ̱E= ̱s(t) / ̱e(t);
+14;Filtrage lineaire;méthode pour déterminer le signal de sortie s(t) d'un Circuit linéraire à une entrée e(t) périodique;0;En vertu du principe de superposition, On décompose d'abord e(t) = ∑eᵢ(t) (eᵢ signal sinusoidaux), On détermine chaque sᵢ(t) signal de sortie pour une entrée eᵢ(t) seule, on obtient s(t) = ∑sᵢ(t);
 14;Filtrage lineaire;gain en fonction de H̱;0;̱H = G * exp(j * ϕ);
 14;Filtrage lineaire;gain en decibels;0;G_db = 20 log(G) = 20 log |H|;
 14;Filtrage lineaire;fonction de transfert d'un Filtre passe-bas (1 ordre) ;0;̱H(x) = H₀ * 1/(1+jx);
