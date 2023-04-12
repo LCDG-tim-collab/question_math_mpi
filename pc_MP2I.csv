@@ -107,7 +107,7 @@ numero_chapitre;chapitre;énoncé;nb_sortie;reponse;
 19;Machines thermiques;rendement de Carnot;0;nc = 1 - Tf / Tc;
 19;Machines thermiques;rendement machine frigorifique (efficacite et et efficacite de Carnot) ;0;e = Qf / W et ec = Tf / (Tc - Tf );
 20;Champ magnétique;moment magnétique;0;m = ISn (n oriente selon le courant);
-20;Champ magnétique;Force de Laplace;0;la force élementaire dF = idl ⋅ B et donc F = ∫idl ⋅ B;
+20;Champ magnétique;Force de Laplace;0;la force élementaire dF = idl ^ B et donc F = ∫idl ^ B;
 20;Champ magnétique;Moment des forces de Laplace ;0;M = m ^ B ;
 21;Induction electromagnétique;Flux du champ magnétique au travers d'une surface S;0;φ = ∬ₛ B ⋅ dSn;
 21;Induction electromagnétique;Loi de Faraday ;0;eind = - dφ / dt;
