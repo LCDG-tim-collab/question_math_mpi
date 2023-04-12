@@ -193,10 +193,10 @@ def comptechap(a):
 
 def plage_to_list_int_str(req : str):
     plages = re.findall("^(\d+[ ]*-[ ]*\d+([ ]*,[ ]*\d+[ ]*-[ ]*\d+)*)$", req)
-    plages = plages[0][0]
     ret = ""
     ints = []
     if plages:
+        plages = plages[0][0]
         for p in plages.split(","):
             start, end = p.split("-")
             for i in range(int(start), int(end) + 1):
@@ -270,9 +270,8 @@ Liste à étudier (rien est comme écrire "tout") (sous forme de liste de nombre
                 if len(a[key]) == 0:
                     del a[key]
                     request2 = input("continuer? yes or no (ou oui ou non)\n")
-                    if (request2[0] in "YyoO" and request2[1] in "EeuU" 
-                            and request2[2] in "SsiI") or request2[0] in "YyoO" \
-                                or request2 == "":
+                    if request2 == "" or request2[0] in "YyoO" (request2[0] in "YyoO" and request2[1] in "EeuU" 
+                            and request2[2] in "SsiI"):
                         a[key] = b.copy().get(request)
                     else:
                         run = False
@@ -403,9 +402,8 @@ Liste à étudier (rien est comme écrire "tout") (sous forme de liste de nombre
                 if len(a[key]) == 0:
                     del a[key]
                     request2 = input("continuer? yes or no (ou oui ou non)\n")
-                    if (request2[0] in "YyoO" and request2[1] in "EeuU" 
-                            and request2[2] in "SsiI") or request2[0] in "YyoO" \
-                                or request2 == "":
+                    if request2 == "" or request2[0] in "YyoO" (request2[0] in "YyoO" and request2[1] in "EeuU" 
+                            and request2[2] in "SsiI"):
                         a[key] = b.copy().get(request)
                     else:
                         run = False
@@ -581,8 +579,8 @@ Liste à étudier (rien est comme écrire "tout") (sous forme de liste de nombre
                 if len(a[liste]) == 0:
                     del a[liste]
                     request2 = input("continuer? yes or no (ou oui ou non)\n")
-                    if request2[0] in "YyoO" or request2 == "" or ((request2[0] in "YyoO") and (request2[1] in "EeUu") 
-                            and (request2[2] in "SsIi")):
+                    if request2 == "" or request2[0] in "YyoO" (request2[0] in "YyoO" and request2[1] in "EeuU" 
+                            and request2[2] in "SsiI"):
                         a[liste] = b.get(liste).copy()
 
                     else:
