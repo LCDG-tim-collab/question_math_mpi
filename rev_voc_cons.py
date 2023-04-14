@@ -27,7 +27,7 @@ def add_count():
     for i in lines:
         file.write(str(i)+";\n")
     file.close()
-
+1
 
 
 def questions_math():
