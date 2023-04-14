@@ -11,7 +11,7 @@ numero chapitre;chapitre;question;compte;reponse;
 2;Lois du frottement solide;Condition de non glissement sur un plan incliné d'un angle ϕ;0;absence de frottement relation |Rt|/|Rn|< tan(ϕ) avec ϕ angle de frottement;
 3;Champ électrostatique;Loi de Coulomb (électrostatique) ;0;Avec la charge q₁ en M₁ et q₂ en M₂ : F1⟶2 = - F2⟶1 = q₁q₂ / 4πɛ₀ × uₘ₁ₘ₂ vecteur;
 3;Champ électrostatique;Théorème de Gauss;0;φ(E) = Qᵢₙₜ / ɛ₀;
-3;Champ électrostatique;Equation locale élextrostatique;0;div(E) = ρ / ɛ₀;
+3;Champ électrostatique;Equation locale électrostatique;0;div(E) = ρ / ɛ₀;
 4;Potentiel et dipôle électrostatique;Expression du potentiel électrique;0;V = 1 / (4πɛ₀) ∑ q / PᵢM;
 4;Potentiel et dipôle électrostatique;Relaton entre champ et potentiel en électrostatique;0;En électrostatique SEULEMENT, E(M) = - grad(V); 
 4;Potentiel et dipôle électrostatique;Equation de poisson;0;laplacien (V) = - ρ / ɛ₀;

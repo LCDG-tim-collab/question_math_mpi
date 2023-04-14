@@ -191,6 +191,23 @@ def comptechap(a):
     return compteparchap
 
 
+def plage_to_list_int_str(req : str):
+    plages = re.findall("^(\d+[ ]*-[ ]*\d+([ ]*,[ ]*\d+[ ]*-[ ]*\d+)*)$", req)
+    ret = ""
+    ints = []
+    if plages:
+        plages = plages[0][0]
+        for p in plages.split(","):
+            start, end = p.split("-")
+            for i in range(int(start), int(end) + 1):
+                if i not in ints:
+                    ret += str(i) + ", "
+                    ints.append(i)
+        return ret[:-2]
+    else:
+        ret = req
+    return ret
+
 def revise_voc_in_console_math(a: dict = questions_math(), b: dict = questions_math()):
     """fonction principal
     """
@@ -201,19 +218,19 @@ def revise_voc_in_console_math(a: dict = questions_math(), b: dict = questions_m
 
     # affichage de la requête pour l'utilisateur
     request = input(
-        """Choisissez qu'UNE SEULE des propositions suivantes:
-tout, {lst}
+        """Choisissez parmi les propositions suivantes:
+tout, \n{lst}
 
-Liste à étudier (numéro des chapitres ou tout) (rien est considéré comme tout) = 
+Liste à étudier (rien est comme écrire "tout") (sous forme de liste de nombre ex: 1, 3, 19; ou de plage : 1-3, 4 - 5, 19-19 (le chapitre 19), 21- 22) (pas de mélange de format)= 
 """.format(
-            lst=", ".join(
+            lst="\n".join(
                 str(i) +":"+ str(j)
                 for i,j in listchap
             )
         )
     )
     # contrôle des réponses
-    while not re.findall("^(\d+(, *\d+)*|tout)?$", request):
+    while not re.findall("^(\d+(, *\d+)*|tout|\d+[ ]*-[ ]*\d+([ ]*,[ ]*\d+[ ]*-[ ]*\d+)*)?$", request):
         request = input("input incorrect; nouvelle input = ")
 
     if request == "":
@@ -253,9 +270,8 @@ Liste à étudier (numéro des chapitres ou tout) (rien est considéré comme to
                 if len(a[key]) == 0:
                     del a[key]
                     request2 = input("continuer? yes or no (ou oui ou non)\n")
-                    if (request2[0] in "YyoO" and request2[1] in "EeuU" 
-                            and request2[2] in "SsiI") or request2[0] in "YyoO" \
-                                or request2 == "":
+                    if request2 == "" or request2[0] in "YyoO" or (request2[0] in "YyoO" and request2[1] in "EeuU" 
+                            and request2[2] in "SsiI"):
                         a[key] = b.copy().get(request)
                     else:
                         run = False
@@ -263,6 +279,9 @@ Liste à étudier (numéro des chapitres ou tout) (rien est considéré comme to
 
     # liste de chapitre 
     else:
+
+        # change les plages s'il y en a en liste de chapitre
+        request = plage_to_list_int_str(request)
 
         while i <= nb_demande and run:
             # liste des chaps en ["a", "b", "c"]
@@ -329,18 +348,18 @@ def revise_voc_in_console_phy1(a: dict = questions_phys_1(), b: dict = questions
     # affichage de la requête pour l'utilisateur
     request = input(
         """Choisissez qu'UNE SEULE des propositions suivantes:
-tout, {lst}
+tout, \n{lst}
 
-Liste à étudier (numéro des chapitres ou tout) (rien est considéré comme tout) = 
+Liste à étudier (rien est comme écrire "tout") (sous forme de liste de nombre ex: 1, 3, 19; ou de plage : 1-3, 4 - 5, 19-19 (le chapitre 19), 21- 22) (pas de mélange de format)= 
 """.format(
-            lst=", ".join(
-                str(i) +":"+ str(j)
+            lst="\n".join(
+                str(i) +": "+ str(j)
                 for i,j in listchap
             )
         )
     )
     # contrôle des réponses
-    while not re.findall("^(\d+(, *\d+)*|tout)?$", request):
+    while not re.findall("^(\d+(, *\d+)*|tout|\d+[ ]*-[ ]*\d+([ ]*,[ ]*\d+[ ]*-[ ]*\d+)*)?$", request):
         request = input("input incorrect; nouvelle input = ")
 
     if request == "":
@@ -383,9 +402,8 @@ Liste à étudier (numéro des chapitres ou tout) (rien est considéré comme to
                 if len(a[key]) == 0:
                     del a[key]
                     request2 = input("continuer? yes or no (ou oui ou non)\n")
-                    if (request2[0] in "YyoO" and request2[1] in "EeuU" 
-                            and request2[2] in "SsiI") or request2[0] in "YyoO" \
-                                or request2 == "":
+                    if request2 == "" or request2[0] in "YyoO" or (request2[0] in "YyoO" and request2[1] in "EeuU" 
+                            and request2[2] in "SsiI"):
                         a[key] = b.copy().get(request)
                     else:
                         run = False
@@ -393,6 +411,9 @@ Liste à étudier (numéro des chapitres ou tout) (rien est considéré comme to
 
     # liste de chapitre 
     else:
+
+        # change les plages s'il y en a en liste de chapitre
+        request = plage_to_list_int_str(request)
 
         while i <= nb_demande and run:
             # liste des chaps en ["a", "b", "c"]
@@ -461,18 +482,18 @@ def revise_voc_in_console_phy2(a: dict = questions_phys_2(), b: dict = questions
     # affichage de la requête pour l'utilisateur
     request = input(
         """Choisissez qu'UNE SEULE des propositions suivantes:
-tout, {lst}
+tout, \n{lst}
 
-Liste à étudier (numéro des chapitres ou tout) (rien est considéré comme tout) = 
+Liste à étudier (rien est comme écrire "tout") (sous forme de liste de nombre ex: 1, 3, 19; ou de plage : 1-3, 4 - 5, 19-19 (le chapitre 19), 21- 22) (pas de mélange de format) = 
 """.format(
-            lst=", ".join(
-                str(i) +":"+ str(j)
+            lst="\n".join(
+                str(i) +": "+ str(j)
                 for i,j in listchap
             )
         )
     )
     # contrôle des réponses
-    while not re.findall("^(\d+(, *\d+)*|tout)?$", request):
+    while not re.findall("^(\d+([ ]*,[ ]*\d+)*|tout|\d+[ ]*-[ ]*\d+([ ]*,[ ]*\d+[ ]*-[ ]*\d+)*)?$", request):
         request = input("input incorrect; nouvelle input = ")
 
     if request == "":
@@ -526,6 +547,9 @@ Liste à étudier (numéro des chapitres ou tout) (rien est considéré comme to
     # liste de chapitre 
     else:
 
+        # change les plages s'il y en a en liste de chapitre
+        request = plage_to_list_int_str(request)
+
         while i <= nb_demande and run:
             # liste des chaps en ["a", "b", "c"]
             reql = [str(int(j)) for j in request.split(",")]
@@ -555,8 +579,8 @@ Liste à étudier (numéro des chapitres ou tout) (rien est considéré comme to
                 if len(a[liste]) == 0:
                     del a[liste]
                     request2 = input("continuer? yes or no (ou oui ou non)\n")
-                    if request2[0] in "YyoO" or request2 == "" or ((request2[0] in "YyoO") and (request2[1] in "EeUu") 
-                            and (request2[2] in "SsIi")):
+                    if request2 == "" or request2[0] in "YyoO" or (request2[0] in "YyoO" and request2[1] in "EeuU" 
+                            and request2[2] in "SsiI"):
                         a[liste] = b.get(liste).copy()
 
                     else:
