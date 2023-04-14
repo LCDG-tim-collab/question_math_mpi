@@ -259,7 +259,7 @@ Liste à étudier (rien est comme écrire "tout") (sous forme de liste de nombre
             quest = choiceone(a, key)
 
             input("{}, {} : {} \n montrer la réponse [entrer] ".format(requestnb, requestnom, quest))
-            print(f"réponse si ajouté est : {a[key][quest][1]}")
+            print(f"réponse si ajoutée est : {a[key][quest][1]}")
 
             answer = input("score = ")
             # bonne réponse
@@ -298,7 +298,7 @@ Liste à étudier (rien est comme écrire "tout") (sous forme de liste de nombre
             key = choiceone(a, liste)
 
             input("{}, {} : {} \n montrer la réponse [entrer] ".format(request, requestnom, key))
-            print(f"réponse si ajouté est : {a[liste][key][1]}")
+            print(f"réponse si ajoutée est : {a[liste][key][1]}")
 
             answer = input("score = ")
 
@@ -391,7 +391,7 @@ Liste à étudier (rien est comme écrire "tout") (sous forme de liste de nombre
             if show == "1":
                 answer = "1"
             else:
-                print(f"réponse si ajouté est : {a[key][quest][1]}")
+                print(f"réponse si ajoutée est : {a[key][quest][1]}")
                 answer = input("score = ")
             
             # bonne réponse
@@ -433,7 +433,7 @@ Liste à étudier (rien est comme écrire "tout") (sous forme de liste de nombre
             if show == "1":
                 answer = "1"
             else:
-                print(f"réponse si ajouté est : {a[liste][key][1]}")
+                print(f"réponse si ajoutée est : {a[liste][key][1]}")
                 answer = input("score = ")
 
             # bonne réponse
@@ -525,7 +525,7 @@ Liste à étudier (rien est comme écrire "tout") (sous forme de liste de nombre
             if show == "1":
                 answer = "1"
             else:
-                print(f"réponse si ajouté est : {a[key][quest][1]}")
+                print(f"réponse si ajoutée est : {a[key][quest][1]}")
                 answer = input("score = ")
             
             # bonne réponse
@@ -568,7 +568,7 @@ Liste à étudier (rien est comme écrire "tout") (sous forme de liste de nombre
             if show == "1":
                 answer = "1"
             else:
-                print(f"réponse si ajouté est : {a[liste][key][1]}")
+                print(f"réponse si ajoutée est : {a[liste][key][1]}")
                 answer = input("score = ")
 
             # bonne réponse
