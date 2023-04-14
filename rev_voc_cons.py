@@ -279,13 +279,13 @@ Liste à étudier (rien est comme écrire "tout") (sous forme de liste de nombre
 
     # liste de chapitre 
     else:
-
         # change les plages s'il y en a en liste de chapitre
         request = plage_to_list_int_str(request)
 
+        # liste des chaps en ["a", "b", "c"]
+        reql = [str(int(j)) for j in request.split(",")]
+
         while i <= nb_demande and run:
-            # liste des chaps en ["a", "b", "c"]
-            reql = [str(int(j)) for j in request.split(",")]
             
             # liste des chaps qui sont encore dans la liste
             listechap = [i for i,j in list(a.keys()) if i in reql]
@@ -415,9 +415,10 @@ Liste à étudier (rien est comme écrire "tout") (sous forme de liste de nombre
         # change les plages s'il y en a en liste de chapitre
         request = plage_to_list_int_str(request)
 
+        # liste des chaps en ["a", "b", "c"]
+        reql = [str(int(j)) for j in request.split(",")]
+
         while i <= nb_demande and run:
-            # liste des chaps en ["a", "b", "c"]
-            reql = [str(int(j)) for j in request.split(",")]
             
             # liste des chaps qui sont encore dans la liste
             listechap = [i for i,j in list(a.keys()) if i in reql]
@@ -550,9 +551,10 @@ Liste à étudier (rien est comme écrire "tout") (sous forme de liste de nombre
         # change les plages s'il y en a en liste de chapitre
         request = plage_to_list_int_str(request)
 
+        # liste des chaps en ["a", "b", "c"]
+        reql = [str(int(j)) for j in request.split(",")]
+
         while i <= nb_demande and run:
-            # liste des chaps en ["a", "b", "c"]
-            reql = [str(int(j)) for j in request.split(",")]
             
             # liste des chaps qui sont encore dans la liste
             listechap = [i for i,j in list(a.keys()) if i in reql]
