@@ -51,10 +51,12 @@
  - ∪ : \cup
  - ∅ : \emptyset
  - ∈ : \in
+ - ᵩ : \_phi ∼ ϕ en indice
 
 
 ## ligne à controler
 
+- pc_MPI.csv l 43 : tim : "j'ai un doute sur la réponse"
 - pc_MPI.csv l 46 : tim : "j'ai un doute sur la réponse"
 - pc_MPI.csv l 52 : tim : "j'ai un doute sur la réponse"
 - pc_MPI.csv l 58 : tim : "j'ai un doute sur la réponse"
