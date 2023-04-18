@@ -275,7 +275,7 @@ Liste à étudier (rien est comme écrire "tout") (sous forme de liste de nombre
                     request2 = input("continuer? yes or no (ou oui ou non)\n")
                     if request2 == "" or request2[0] in "YyoO" or (request2[0] in "YyoO" and request2[1] in "EeuU" 
                             and request2[2] in "SsiI"):
-                        a[key] = b.copy().get(request)
+                        a[key] = b.copy().get(key)
                     else:
                         run = False
             i += 1
@@ -409,7 +409,7 @@ Liste à étudier (rien est comme écrire "tout") (sous forme de liste de nombre
                     request2 = input("continuer? yes or no (ou oui ou non)\n")
                     if request2 == "" or request2[0] in "YyoO" or (request2[0] in "YyoO" and request2[1] in "EeuU" 
                             and request2[2] in "SsiI"):
-                        a[key] = b.copy().get(request)
+                        a[key] = b.copy().get(key)
                     else:
                         run = False
             i += 1
@@ -545,7 +545,7 @@ Liste à étudier (rien est comme écrire "tout") (sous forme de liste de nombre
                     if (request2[0] in "YyoO" and request2[1] in "EeuU" 
                             and request2[2] in "SsiI") or request2[0] in "YyoO" \
                                 or request2 == "":
-                        a[key] = b.copy().get(request)
+                        a[key] = b.copy().get(key)
                     else:
                         run = False
             i += 1
