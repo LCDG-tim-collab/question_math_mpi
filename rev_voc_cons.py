@@ -258,10 +258,13 @@ Liste à étudier (rien est comme écrire "tout") (sous forme de liste de nombre
             # séléctionne une question du chapitre
             quest = choiceone(a, key)
 
-            input("{}, {} : {} \n montrer la réponse [entrer] ".format(requestnb, requestnom, quest))
-            print(f"réponse si ajoutée est : {a[key][quest][1]}")
+            show = input("{} / {}) {}, {} : {} \n montrer la réponse [entrer] ".format(i, nb_demande, request, requestnom, key))
+            if show == "1":
+                answer = "1"
+            else:
+                print(f"réponse si ajoutée est : {a[key][quest][1]}")
+                answer = input("score = ")
 
-            answer = input("score = ")
             # bonne réponse
             if (answer == "1"):
                 compteur += 1
@@ -297,10 +300,12 @@ Liste à étudier (rien est comme écrire "tout") (sous forme de liste de nombre
             # on sélectionne la question
             key = choiceone(a, liste)
 
-            input("{}, {} : {} \n montrer la réponse [entrer] ".format(request, requestnom, key))
-            print(f"réponse si ajoutée est : {a[liste][key][1]}")
-
-            answer = input("score = ")
+            show = input("{} / {}) {}, {} : {} \n montrer la réponse [entrer] ".format(i, nb_demande, request, requestnom, key))
+            if show == "1":
+                answer = "1"
+            else:
+                print(f"réponse si ajoutée est : {a[key][quest][1]}")
+                answer = input("score = ")
 
             # bonne réponse
             if (answer == "1"):
@@ -387,7 +392,7 @@ Liste à étudier (rien est comme écrire "tout") (sous forme de liste de nombre
             # séléctionne une question du chapitre
             quest = choiceone(a, key)
 
-            show = input("{} / {}) {}, {} : {} \n montrer la réponse [entrer] ".format(i, nb_demande, request, requestnom, key))
+            show = input("{} / {}) {}, {} : {} \n montrer la réponse [entrer] ".format(i, nb_demande, requestnb, requestnom, key))
             if show == "1":
                 answer = "1"
             else:
@@ -522,7 +527,7 @@ Liste à étudier (rien est comme écrire "tout") (sous forme de liste de nombre
             # séléctionne une question du chapitre
             quest = choiceone(a, key)
 
-            show = input("{} / {}) {}, {} : {} \n montrer la réponse [entrer] ".format(i, nb_demande, request, requestnom, key))
+            show = input("{} / {}) {}, {} : {} \n montrer la réponse [entrer] ".format(i, nb_demande, requestnb, requestnom, quest))
             if show == "1":
                 answer = "1"
             else:
