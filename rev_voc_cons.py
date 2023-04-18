@@ -392,7 +392,7 @@ Liste à étudier (rien est comme écrire "tout") (sous forme de liste de nombre
             # séléctionne une question du chapitre
             quest = choiceone(a, key)
 
-            show = input("{} / {}) {}, {} : {} \n montrer la réponse [entrer] ".format(i, nb_demande, requestnb, requestnom, key))
+            show = input("{} / {}) {}, {} : {} \n montrer la réponse [entrer] ".format(i, nb_demande, requestnb, requestnom, quest))
             if show == "1":
                 answer = "1"
             else:
