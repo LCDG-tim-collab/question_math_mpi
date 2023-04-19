@@ -46,6 +46,7 @@ def questions_math():
     for j, i in enumerate(lines[1:]):
         chapnb, chapnom, quest, compte, reponse, bac = i.split(";")
         chapkey = (chapnb, chapnom)
+        reponse = reponse.replace("\\n", "\n")
         if dic.get(chapkey) is None:
             dic[chapkey] = {}
         dic[chapkey][quest] = [int(compte), reponse]
@@ -84,6 +85,7 @@ def questions_phys_1():
     for j, i in enumerate(lines):
         chapnb, chapnom, quest, compte, reponse, bac = i.split(";")
         chapkey = (chapnb, chapnom)
+        reponse = reponse.replace("\\n", "\n")
         if dic.get(chapkey) is None:
             dic[chapkey] = {}
         dic[chapkey][quest] = [int(compte), reponse]
@@ -108,6 +110,7 @@ def questions_phys_2():
             print(i)
         chapnb, chapnom, quest, compte, reponse, bac = i.split(";")
         chapkey = (chapnb, chapnom)
+        reponse = reponse.replace("\\n", "\n")
         if dic.get(chapkey) is None:
             dic[chapkey] = {}
         dic[chapkey][quest] = [int(compte), reponse]
