@@ -142,7 +142,7 @@ numero_chapitre;chapitre;énoncé;nb_sortie;reponse;
 5;espaces vectoriels normés;définition de la norme subordonnée d'une application linéaire;0;Pour 𝑢 une application linéaire de E dans F deux espaces vectoriels normés ⦀𝑢⦀ = sup {‖𝑢(𝑥)‖_F/‖𝑥‖ₑ, 𝑥 ∈ E};
 5;espaces vectoriels normés;pour une application linéaire 𝑢 et un vecteur 𝑥, quel rapport entre les normes ‖𝑢(𝑥)‖, ‖𝑥‖ et la norme subordonnée ⦀𝑢⦀ ?;0;‖𝑢(𝑥)‖/‖𝑥‖ ≤ ⦀𝑢⦀;
 5;espaces vectoriels normés;quel rapport entre une valeur propre λ d'un endomorphisme 𝑢 et la norme subordonnée ⦀𝑢⦀ ?;0;⦀𝑢⦀ ≥ |λ|;
-5;espaces vectoriels normés;que dire de la norme subordonnée ⦀u + v⦀  d'une somme ?;0;⦀u + v⦀ ≤ ⦀u⦀ × ⦀v⦀ par inégalité triangulaire;
+5;espaces vectoriels normés;que dire de la norme subordonnée ⦀u + v⦀  d'une somme ?;0;⦀u + v⦀ ≤ ⦀u⦀ + ⦀v⦀ par inégalité triangulaire;
 5;espaces vectoriels normés;que dire de la norme subordonnée ⦀u ∘ v⦀  de la composée ?;0;⦀u ∘ v⦀ ≤ ⦀u⦀ × ⦀v⦀ par sous-multiplicativité;
 5;espaces vectoriels normés;définition d'un compact;0;A est compact si ∀(aₙ) ∈ Aᴺ, ∃ (aᵩ₍ₙ₎), aᵩ₍ₙ₎ ⟶ l ∈ A, c'est-à-dire A est compact si toute suite d'éléments de A possède au moins une valeur d'adhérence dans A.;
 5;espaces vectoriels normés;Vrai / Faux : compact=fermé borné ?;0; Seulement en dimension finie, en dimension quelconque un compact est fermé et borné mais la réciproque n'est pas forcément vraie;
